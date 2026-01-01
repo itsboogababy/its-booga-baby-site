@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>It’s Booga Baby — Great Deals on Quality Products</title>
+  <meta name="description" content="It’s Booga Baby: great deals on quality products — friendly vibe today, sleek tomorrow." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo" aria-label="It’s Booga Baby logo">BB</div>
+        <div class="brand-text">
+          <div class="brand-name">It’s Booga Baby</div>
+          <div class="brand-tagline">Great deals on quality products</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a class="btn" href="#contact">Get Updates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Friendly vibes. Serious deals.</h1>
+          <p>
+            Welcome to <strong>It’s Booga Baby</strong> — a simple, honest online shop built for real value.
+            We’ll start with a few winning items and expand as the business grows.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#shop">Browse Picks</a>
+            <a class="btn btn-ghost" href="#contact">Join the Deal List</a>
+          </div>
+
+          <div class="trust">
+            <div class="trust-item">✅ Fast, mobile-first site</div>
+            <div class="trust-item">✅ Built to scale later</div>
+            <div class="trust-item">✅ $0 hosting to start</div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="card">
+            <div class="card-title">Today’s Highlight</div>
+            <div class="card-subtitle">Example category tiles (we’ll replace these with real items)</div>
+
+            <div class="grid">
+              <div class="tile">
+                <div class="tile-img" aria-hidden="true"></div>
+                <div class="tile-name">Household Essentials</div>
+                <div class="tile-meta">Best value picks</div>
+              </div>
+
+              <div class="tile">
+                <div class="tile-img" aria-hidden="true"></div>
+                <div class="tile-name">Tools & Hardware</div>
+                <div class="tile-meta">Reliable basics</div>
+              </div>
+
+              <div class="tile">
+                <div class="tile-img" aria-hidden="true"></div>
+                <div class="tile-name">Everyday Gear</div>
+                <div class="tile-meta">Daily wins</div>
+              </div>
+
+              <div class="tile">
+                <div class="tile-img" aria-hidden="true"></div>
+                <div class="tile-name">Seasonal Deals</div>
+                <div class="tile-meta">Limited drops</div>
+              </div>
+            </div>
+
+            <div class="card-note">
+              Next: we’ll swap these placeholders with your real products and add checkout when you’re ready.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="container">
+        <h2>Starter Shop Section</h2>
+        <p class="muted">
+          We’ll keep this simple at first: a few featured items. You can start selling using a payment link (free),
+          then upgrade to a full cart later.
+        </p>
+
+        <div class="product-row">
+          <div class="product">
+            <div class="product-img" aria-hidden="true"></div>
+            <div class="product-name">Featured Item #1</div>
+            <div class="product-price">$—</div>
+            <a class="btn btn-small" href="#contact">Notify me</a>
+          </div>
+
+          <div class="product">
+            <div class="product-img" aria-hidden="true"></div>
+            <div class="product-name">Featured Item #2</div>
+            <div class="product-price">$—</div>
+            <a class="btn btn-small" href="#contact">Notify me</a>
+          </div>
+
+          <div class="product">
+            <div class="product-img" aria-hidden="true"></div>
+            <div class="product-name">Featured Item #3</div>
+            <div class="product-price">$—</div>
+            <a class="btn btn-small" href="#contact">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container">
+        <h2>About It’s Booga Baby</h2>
+        <p>
+          It’s Booga Baby starts with a friendly vibe and grows into a sleek, modern brand — always focused on
+          great deals and quality products. We start lean, improve weekly, and scale when the numbers say go.
+        </p>
+
+        <div class="bullets">
+          <div class="bullet">🎯 Mission: quality products, better prices</div>
+          <div class="bullet">🛠️ Start simple, improve weekly</div>
+          <div class="bullet">🚀 Upgrade to full e-commerce when ready</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-box">
+        <h2>Get Deal Alerts</h2>
+        <p class="muted">Drop your email and we’ll send new deals when they go live.</p>
+
+        <!-- Placeholder form. Next step: connect to a free form service (no backend needed). -->
+        <form class="form" onsubmit="event.preventDefault(); alert('Nice! Next we will connect this form for real.');">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" class="input" type="email" placeholder="you@email.com" required />
+          <button class="btn" type="submit">Join</button>
+        </form>
+
+        <p class="tiny muted">
+          No spam. Just drops + deals.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> It’s Booga Baby</div>
+      <div class="muted">Built lean. Built right.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
