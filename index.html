@@ -15,6 +15,7 @@
         <div class="logo" aria-label="It’s Booga Baby logo">
           <img src="logo.png" alt="It’s Booga Baby logo" />
         </div>
+
         <div class="brand-text">
           <div class="brand-name">It’s Booga Baby</div>
           <div class="brand-tagline">Great deals on quality products</div>
@@ -23,6 +24,7 @@
 
       <nav class="nav" aria-label="Primary navigation">
         <a href="#shop">Shop</a>
+        <a href="#why">Why</a>
         <a href="#about">About</a>
         <a class="btn" href="#contact">Get Updates</a>
       </nav>
@@ -123,8 +125,8 @@
       </div>
     </section>
 
-    <section class="section">
-        <div class="container">
+    <section id="why" class="section">
+      <div class="container">
         <h2>Why It’s Booga Baby Exists</h2>
         <p>
           This shop was built for families who want solid products without the runaround.
@@ -136,11 +138,11 @@
           No pressure. No hype. Just honest value.
         </p>
 
-         <div class="bullets">
+        <div class="bullets">
           <div class="bullet">🇺🇸 Veteran-owned and family-driven</div>
           <div class="bullet">🛒 Products chosen for usefulness, not trends</div>
           <div class="bullet">💬 Clear pricing and straight talk</div>
-         </div>
+        </div>
       </div>
     </section>
 
@@ -164,15 +166,15 @@
       <div class="container contact-box">
         <h2>Get Deal Alerts</h2>
         <p class="muted">Drop your email and we’ll send new deals when they go live.</p>
-        <input type="hidden" name="_next" value="https://itsboogababy.com/#contact" />
-        <form class="form" action="https://formspree.io/f/mbdlgwjg" method="POST">
-          <p class="tiny muted">We respect your inbox. Unsubscribe anytime.</p>
 
+        <form class="form" action="https://formspree.io/f/mbdlgwjg" method="POST">
+          <input type="hidden" name="_next" value="https://itsboogababy.com/#contact" />
+          <input type="hidden" name="_subject" value="New It’s Booga Baby signup" />
           <input id="email" class="input" type="email" name="email" placeholder="you@email.com" required />
           <button class="btn" type="submit">Join</button>
         </form>
 
-        <p class="tiny muted">No spam. Just drops + deals.</p>
+        <p class="tiny muted">We respect your inbox. Unsubscribe anytime.</p>
       </div>
     </section>
   </main>
@@ -189,5 +191,3 @@
   </script>
 </body>
 </html>
-
-
