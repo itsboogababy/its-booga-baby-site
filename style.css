@@ -48,11 +48,13 @@ a{color:inherit;text-decoration:none}
   gap:12px;
 }
 
-/* Logo badge */
+/* Logo badge + image
+   Your logo is tall/narrow, so we size the IMAGE by both width and height
+   and use object-fit: contain so it never stretches. */
 .logo{
-  width:60px;
-  height:60px;
-  border-radius:18px;
+  width:92px;
+  height:92px;
+  border-radius:24px;
   background: linear-gradient(135deg, rgba(225,29,72,.95), rgba(225,29,72,.45));
   display:flex;
   align-items:center;
@@ -61,18 +63,16 @@ a{color:inherit;text-decoration:none}
   box-shadow: var(--shadow);
 }
 
-/* Logo image */
 .logo img{
-  height:40px;
-  width:auto;
+  width:78px;
+  height:78px;
+  object-fit:contain;
   display:block;
 }
 
-/* Optional: if your logo is dark and disappears on dark background,
-   uncomment the next line to force it visible.
-   (Try without it first.)
+/* If your logo is dark and disappears on the dark background, uncomment:
+   .logo img{ filter: brightness(0) invert(1); }
 */
-/* .logo img{ filter: brightness(0) invert(1); } */
 
 .brand-name{font-weight:800}
 .brand-tagline{font-size:12px;color:var(--muted)}
@@ -289,22 +289,6 @@ h2{margin:0 0 10px; font-size:26px}
   .hero-grid{grid-template-columns: 1fr}
   .hero h1{font-size:36px}
   .product-row{grid-template-columns: 1fr}
+  .logo{width:72px;height:72px;border-radius:20px}
+  .logo img{width:60px;height:60px}
 }
-/* ===== FINAL LOGO SIZE OVERRIDE ===== */
-.logo{
-  width:72px !important;
-  height:72px !important;
-  border-radius:20px !important;
-  overflow:hidden !important;
-}
-
-.logo img{
-  height:52px !important;
-  width:auto !important;
-  display:block !important;
-}
-
-
-
-
-
