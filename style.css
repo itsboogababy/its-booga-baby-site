@@ -290,6 +290,20 @@ h2{margin:0 0 10px; font-size:26px}
   .hero h1{font-size:36px}
   .product-row{grid-template-columns: 1fr}
 }
+/* ===== FINAL LOGO SIZE OVERRIDE ===== */
+.logo{
+  width:72px !important;
+  height:72px !important;
+  border-radius:20px !important;
+  overflow:hidden !important;
+}
+
+.logo img{
+  height:52px !important;
+  width:auto !important;
+  display:block !important;
+}
+
 
 
 
