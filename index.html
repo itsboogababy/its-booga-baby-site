@@ -1,345 +1,191 @@
-:root{
-  --bg:#070910;            /* deep navy / near-black */
-  --bg2:#0b0f1c;           /* subtle depth */
-  --cream:#f6f1e6;         /* cream strip */
-  --text:#eef2ff;
-  --muted:#b3bccb;
-  --line:rgba(255,255,255,.10);
-  --card:rgba(255,255,255,.04);
-  --shadow:0 18px 60px rgba(0,0,0,.38);
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT’S BOOGA BABY — Quality Over Noise</title>
+  <meta name="description" content="Quiet swagger. Solid pieces. Quality over noise." />
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
 
-  --gold:#d4af37;          /* thin gold line */
-  --accent:#e11d48;        /* keep your red available */
-  --radius:22px;
-}
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="IT’S BOOGA BABY home">
+        <div class="logo" aria-label="IT’S BOOGA BABY logo">
+          <img src="logo-main.png" alt="IT’S BOOGA BABY logo" />
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">IT’S BOOGA BABY</div>
+          <div class="brand-tagline">Quality over noise</div>
+        </div>
+      </a>
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#featured">Featured</a>
+        <a href="#about">About</a>
+        <a class="btn btn-ghost" href="#contact">Get Updates</a>
+      </nav>
+    </div>
+  </header>
 
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:
-    radial-gradient(1000px 700px at 20% 10%, rgba(212,175,55,.08), transparent 60%),
-    radial-gradient(900px 600px at 85% 20%, rgba(255,255,255,.06), transparent 60%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
-  color:var(--text);
-}
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">Quiet swagger. Solid pieces.</p>
 
-a{color:inherit;text-decoration:none}
-.container{max-width:1120px;margin:0 auto;padding:0 18px}
+          <h1 class="hero-title" data-reveal>
+            IT’S BOOGA BABY
+            <span class="hero-underline" aria-hidden="true"></span>
+          </h1>
 
-/* HEADER */
-.site-header{
-  position:sticky; top:0; z-index:10;
-  background: rgba(7,9,16,.70);
-  backdrop-filter: blur(10px);
-  border-bottom:1px solid var(--line);
-}
+          <p class="hero-sub">
+            Designed to be worn, not babied. Built for consistency — not trends.
+          </p>
 
-.header-row{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0;
-  gap:16px;
-}
+          <div class="hero-actions">
+            <a class="btn" href="#featured">Shop Featured</a>
+            <a class="btn btn-ghost" href="#contact">Join the Deal List</a>
+          </div>
 
-.brand{display:flex; align-items:center; gap:12px}
-.brand-text{display:flex; flex-direction:column; gap:2px}
-.brand-name{font-weight:800; letter-spacing:.6px}
-.brand-tagline{font-size:12px; color:var(--muted); opacity:.9}
+          <div class="trust">
+            <span class="trust-item">🇺🇸 Veteran-owned</span>
+            <span class="trust-item">🔒 Secure site</span>
+            <span class="trust-item">🧼 Clean drops only</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* LOGO (quiet, not screaming) */
-.logo{
-  width:76px;
-  height:76px;
-  border-radius:22px;
-  background: linear-gradient(135deg, rgba(212,175,55,.25), rgba(255,255,255,.02));
-  border:1px solid rgba(212,175,55,.28);
-  display:flex; align-items:center; justify-content:center;
-  overflow:hidden;
-  box-shadow: var(--shadow);
-}
+    <!-- BRAND STATEMENT STRIP (SWAG MOMENT) -->
+    <section class="strip">
+      <div class="container strip-inner">
+        <div class="strip-text">
+          <div class="strip-line">QUALITY OVER NOISE</div>
+          <div class="strip-line">CONSISTENCY OVER TRENDS</div>
+          <div class="strip-mark">IT’S BOOGA BABY</div>
+        </div>
+      </div>
+    </section>
 
-.logo img{
-  width:58px;
-  height:58px;
-  object-fit:contain;
-  display:block;
-}
+    <!-- FEATURED PRODUCTS -->
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Products</h2>
+          <p class="muted">Three pieces. Chosen, not dumped.</p>
+        </div>
 
-.nav{display:flex; align-items:center; gap:14px}
-.nav a{opacity:.88}
-.nav a:hover{opacity:1}
+        <div class="products">
+          <article class="product">
+            <div class="product-photo" aria-hidden="true"></div>
+            <div class="product-meta">
+              <div class="product-name">Signature Cap</div>
+              <div class="product-price">$—</div>
+            </div>
+            <p class="product-desc muted">Clean fit. Everyday wear. No extra.</p>
+            <a class="btn btn-small" href="#contact">Get notified</a>
+          </article>
 
-/* BUTTONS */
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:10px 14px;
-  border-radius:999px;
-  border:1px solid rgba(212,175,55,.35);
-  background: rgba(212,175,55,.10);
-  font-weight:700;
-  transition: transform .12s ease, opacity .12s ease;
-}
-.btn:hover{transform: translateY(-1px)}
-.btn:active{transform: translateY(0px)}
-.btn-ghost{
-  background: transparent;
-  border:1px solid var(--line);
-}
-.btn-small{padding:8px 12px; font-size:14px}
+          <article class="product">
+            <div class="product-photo" aria-hidden="true"></div>
+            <div class="product-meta">
+              <div class="product-name">Core Tee</div>
+              <div class="product-price">$—</div>
+            </div>
+            <p class="product-desc muted">Soft, solid, consistent. Built for repeat wears.</p>
+            <a class="btn btn-small" href="#contact">Get notified</a>
+          </article>
 
-/* HERO */
-.hero{
-  padding:92px 0 56px;
-}
+          <article class="product">
+            <div class="product-photo" aria-hidden="true"></div>
+            <div class="product-meta">
+              <div class="product-name">Everyday Essential</div>
+              <div class="product-price">$—</div>
+            </div>
+            <p class="product-desc muted">The piece you keep reaching for.</p>
+            <a class="btn btn-small" href="#contact">Get notified</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-.hero-inner{
-  display:flex;
-  align-items:flex-end;
-  justify-content:flex-start;
-}
+    <!-- LIFESTYLE MOMENT -->
+    <section class="section alt">
+      <div class="container lifestyle">
+        <div class="lifestyle-media" aria-hidden="true">
+          <div class="lifestyle-card">
+            <div class="life-img"></div>
+            <div class="life-img"></div>
+          </div>
+        </div>
 
-.hero-copy{max-width:760px}
-.hero-kicker{
-  margin:0 0 10px;
-  color:rgba(238,242,255,.85);
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-size:12px;
-}
+        <div class="lifestyle-copy">
+          <h2>Lifestyle</h2>
+          <p class="muted">
+            Neutral lighting. Real pieces. No forced smiles.
+          </p>
+          <p class="lifestyle-line">
+            No hype. Just solid pieces.
+          </p>
+        </div>
+      </div>
+    </section>
 
-.hero-title{
-  position:relative;
-  margin:0 0 14px;
-  font-size:56px;
-  line-height:1.02;
-  letter-spacing:.02em;
-  transform: translateY(10px);
-  opacity:0;
-}
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about">
+        <h2>About</h2>
+        <p>
+          IT’S BOOGA BABY is built like a brand that knows itself:
+          calm, consistent, and focused on quality.
+        </p>
+        <p class="muted">
+          We start lean. We keep standards high. We only drop what fits the vibe.
+        </p>
 
-.hero-title.is-visible{
-  opacity:1;
-  transform: translateY(0px);
-  transition: opacity .55s ease, transform .55s ease;
-}
+        <div class="about-points">
+          <div class="about-point">Quality over noise.</div>
+          <div class="about-point">Consistency over trends.</div>
+          <div class="about-point">Pieces built for real life.</div>
+        </div>
+      </div>
+    </section>
 
-/* Gold line draws once */
-.hero-underline{
-  display:block;
-  height:2px;
-  width:100%;
-  max-width:520px;
-  background: var(--gold);
-  margin-top:14px;
-  transform-origin:left;
-  transform: scaleX(0);
-}
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact-box">
+        <h2>Get Deal Alerts</h2>
+        <p class="muted">Drop your email. We only message when drops are real.</p>
 
-.hero-title.is-visible .hero-underline{
-  animation: drawLine .9s ease forwards;
-  animation-delay: .25s;
-}
+        <form class="form" action="https://formspree.io/f/mbdlgwjg" method="POST">
+          <input type="hidden" name="_subject" value="New IT’S BOOGA BABY signup" />
+          <input id="email" class="input" type="email" name="email" placeholder="you@email.com" required />
+          <button class="btn" type="submit">Join</button>
+        </form>
 
-@keyframes drawLine{
-  to{ transform: scaleX(1); }
-}
+        <p class="tiny muted">We respect your inbox. Unsubscribe anytime.</p>
+      </div>
+    </section>
+  </main>
 
-.hero-sub{
-  margin:0 0 18px;
-  color: var(--muted);
-  font-size:16px;
-  line-height:1.7;
-}
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> IT’S BOOGA BABY</div>
+      <div class="footer-flex">IT’S BOOGA BABY LLC <span class="dot">•</span> EST. 2025</div>
+    </div>
+  </footer>
 
-.hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin:0 0 16px}
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-.trust{display:flex; gap:10px; flex-wrap:wrap}
-.trust-item{
-  font-size:13px;
-  color: rgba(238,242,255,.82);
-  border:1px solid var(--line);
-  padding:8px 10px;
-  border-radius:999px;
-  background: rgba(255,255,255,.03);
-}
-
-/* SWAG STRIP */
-.strip{
-  background: var(--cream);
-  color:#121622;
-  border-top:1px solid rgba(0,0,0,.08);
-  border-bottom:1px solid rgba(0,0,0,.08);
-}
-
-.strip-inner{padding:44px 0}
-.strip-text{display:flex; flex-direction:column; gap:10px}
-.strip-line{
-  font-size:28px;
-  letter-spacing:.04em;
-  font-weight:800;
-}
-.strip-mark{
-  margin-top:6px;
-  font-weight:900;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  font-size:14px;
-  opacity:.85;
-}
-
-/* SECTIONS */
-.section{padding:74px 0}
-.section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap}
-h2{margin:0; font-size:26px; letter-spacing:.02em}
-.muted{color:var(--muted)}
-.tiny{font-size:12px}
-
-/* FEATURED PRODUCTS (3 max) */
-.products{
-  margin-top:18px;
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap:14px;
-}
-
-.product{
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  padding:14px;
-  background: var(--card);
-  box-shadow: var(--shadow);
-}
-
-.product-photo{
-  height:320px;                 /* big photos */
-  border-radius:18px;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,.06), rgba(212,175,55,.10));
-  border:1px solid rgba(255,255,255,.10);
-  margin-bottom:14px;
-}
-
-.product-meta{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.product-name{font-weight:900; letter-spacing:.02em}
-.product-price{font-weight:800; opacity:.92}
-.product-desc{margin:8px 0 12px; line-height:1.6}
-
-/* LIFESTYLE */
-.section.alt{
-  background: rgba(255,255,255,.02);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.lifestyle{
-  display:grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap:18px;
-  align-items:center;
-}
-
-.lifestyle-card{
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  padding:14px;
-  background: var(--card);
-  box-shadow: var(--shadow);
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:12px;
-}
-
-.life-img{
-  height:220px;
-  border-radius:18px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.12));
-  border:1px solid rgba(255,255,255,.10);
-}
-
-.lifestyle-line{
-  margin-top:14px;
-  font-weight:900;
-  letter-spacing:.02em;
-}
-
-/* ABOUT */
-.about p{line-height:1.8; margin:0 0 10px}
-.about-points{
-  margin-top:16px;
-  display:grid;
-  gap:10px;
-}
-.about-point{
-  border:1px solid var(--line);
-  padding:12px 14px;
-  border-radius: var(--radius);
-  background: rgba(255,255,255,.03);
-  font-weight:800;
-}
-
-/* CONTACT */
-.contact-box{
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.03);
-  border-radius: var(--radius);
-  padding:18px;
-  box-shadow: var(--shadow);
-}
-
-.form{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:12px;
-}
-
-.input{
-  flex:1;
-  min-width:240px;
-  padding:12px 14px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.03);
-  color: var(--text);
-  outline:none;
-}
-.input::placeholder{color: rgba(179,188,203,.78)}
-
-/* FOOTER */
-.footer{
-  border-top:1px solid var(--line);
-  padding:18px 0 26px;
-}
-.footer-row{
-  display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
-  color: rgba(238,242,255,.82);
-}
-.footer-flex{opacity:.9; letter-spacing:.06em; text-transform:uppercase; font-weight:800; font-size:12px}
-.dot{opacity:.7; padding:0 6px}
-
-/* Accessibility */
-.sr-only{
-  position:absolute;
-  width:1px;height:1px;
-  padding:0;margin:-1px;
-  overflow:hidden;clip:rect(0,0,0,0);
-  white-space:nowrap;border:0;
-}
-
-/* MOBILE */
-@media (max-width: 900px){
-  .hero-title{font-size:44px}
-  .products{grid-template-columns:1fr}
-  .product-photo{height:280px}
-  .lifestyle{grid-template-columns:1fr}
-  .logo{width:68px;height:68px;border-radius:20px}
-  .logo img{width:52px;height:52px}
-}
+    // Reveal title + draw line once (no loop)
+    window.addEventListener("load", () => {
+      const t = document.querySelector("[data-reveal]");
+      if (t) t.classList.add("is-visible");
+    });
+  </script>
+</body>
+</html>
