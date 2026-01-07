@@ -37,9 +37,7 @@ a{color:inherit;text-decoration:none}
 }
 
 .header-row{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0;
-  gap:16px;
+  padding:10px 0;
 }
 
 .brand{display:flex; align-items:center; gap:12px}
@@ -448,4 +446,13 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
 @media (max-width: 900px){
   .product-page{grid-template-columns:1fr}
   .product-page-media{height:360px}
+}
+
+.product{
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.product:hover{
+  transform: translateY(-2px);
+  border-color: rgba(212,175,55,.35);
 }
