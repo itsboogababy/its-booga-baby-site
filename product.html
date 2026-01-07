@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product — IT’S BOOGA BABY</title>
+  <meta name="description" content="Clean product page. Calm close-up. Quiet swagger." />
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="IT’S BOOGA BABY home">
+        <div class="logo" aria-label="IT’S BOOGA BABY logo">
+          <img src="logo-main.png" alt="IT’S BOOGA BABY logo" />
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">IT’S BOOGA BABY</div>
+          <div class="brand-tagline">Quality over noise</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#featured">Featured</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-ghost" href="index.html#contact">Get Updates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="product-page">
+          <div class="product-page-media" aria-hidden="true"></div>
+
+          <div class="product-page-info">
+            <div class="product-page-top">
+              <h1 class="product-page-name">Signature Cap</h1>
+              <div class="product-page-price">$—</div>
+            </div>
+
+            <p class="muted product-page-desc">
+              Clean fit. Everyday wear. No extra. This is the piece you throw on without thinking —
+              and it still looks right.
+            </p>
+
+            <p class="product-page-attitude">Designed to be worn, not babied.</p>
+
+            <div class="product-page-details">
+              <div class="detail">
+                <div class="detail-title">Fit</div>
+                <div class="detail-body muted">Structured, clean profile.</div>
+              </div>
+              <div class="detail">
+                <div class="detail-title">Finish</div>
+                <div class="detail-body muted">Minimal branding. No loud graphics.</div>
+              </div>
+              <div class="detail">
+                <div class="detail-title">Drop style</div>
+                <div class="detail-body muted">Small batches. Chosen pieces only.</div>
+              </div>
+            </div>
+
+            <div class="product-page-actions">
+              <a class="btn" href="index.html#contact">Get notified</a>
+              <a class="btn btn-ghost" href="index.html#featured">Back to Featured</a>
+            </div>
+
+            <p class="tiny muted">Checkout goes live when the first drop is ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> IT’S BOOGA BABY</div>
+      <div class="footer-flex">IT’S BOOGA BABY LLC <span class="dot">•</span> EST. 2025</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
