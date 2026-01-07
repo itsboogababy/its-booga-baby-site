@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — IT’S BOOGA BABY</title>
+  <meta name="description" content="A calm, established about page. Strong headings. Plenty of white space." />
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="IT’S BOOGA BABY home">
+        <div class="logo" aria-label="IT’S BOOGA BABY logo">
+          <img src="logo-main.png" alt="IT’S BOOGA BABY logo" />
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">IT’S BOOGA BABY</div>
+          <div class="brand-tagline">Quality over noise</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#featured">Featured</a>
+        <a href="product.html">Product</a>
+        <a class="btn btn-ghost" href="index.html#contact">Get Updates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container about-page">
+        <h1>About</h1>
+        <p class="muted about-lede">
+          IT’S BOOGA BABY is built for people who like their style the way they like their life:
+          clean, consistent, and real.
+        </p>
+
+        <div class="about-block">
+          <h2>What we stand for</h2>
+          <p>
+            We don’t chase noise. We don’t chase trends. We focus on pieces that feel right today
+            and still feel right later.
+          </p>
+          <div class="about-points">
+            <div class="about-point">QUALITY OVER NOISE</div>
+            <div class="about-point">CONSISTENCY OVER TRENDS</div>
+            <div class="about-point">IT’S BOOGA BABY</div>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <h2>How we drop</h2>
+          <p class="muted">
+            Small batches. Clear choices. We’d rather have fewer pieces that hit,
+            than a page full of “maybe.”
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h2>Who it’s for</h2>
+          <p class="muted">
+            People who want a solid look without trying too hard.
+          </p>
+        </div>
+
+        <div class="about-cta">
+          <a class="btn" href="index.html#contact">Join the deal list</a>
+          <a class="btn btn-ghost" href="index.html">Back home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> IT’S BOOGA BABY</div>
+      <div class="footer-flex">IT’S BOOGA BABY LLC <span class="dot">•</span> EST. 2025</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
