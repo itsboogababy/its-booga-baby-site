@@ -7,7 +7,7 @@
   <meta name="description" content="Quiet swagger. Solid pieces. Quality over noise." />
 
   <link rel="preconnect" href="https://formspree.io" />
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     <div id="top"></div>
 
     <!-- HERO (LUXURY FIRST IMPRESSION) -->
-    <section class="hero hero-lux">
+    <section class="hero">
       <div class="container hero-lux-grid">
         <div class="hero-copy">
           <p class="hero-kicker">Quiet swagger. Solid pieces.</p>
@@ -67,16 +67,14 @@
         <div class="hero-media" aria-hidden="true">
           <div class="hero-media-card">
             <img class="hero-media-img" src="images/lifestyle-hat.jpg" alt="" loading="lazy" decoding="async" />
-            <div class="hero-media-caption">
-              No hype. Just solid pieces.
-            </div>
+            <div class="hero-media-caption">No hype. Just solid pieces.</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- BRAND STATEMENT STRIP (QUIET SWAG) -->
-    <section class="strip strip-lux">
+    <section class="strip">
       <div class="container strip-inner">
         <div class="strip-text">
           <div class="strip-line">QUALITY OVER NOISE</div>
@@ -87,9 +85,9 @@
     </section>
 
     <!-- FEATURED PRODUCTS (CLEAN FLEX) -->
-    <section id="featured" class="section section-lux">
+    <section id="featured" class="section">
       <div class="container">
-        <div class="section-head lux-head">
+        <div class="section-head">
           <div>
             <h2>Featured</h2>
             <p class="muted">Three pieces. Chosen, not dumped.</p>
@@ -97,8 +95,8 @@
           <div class="muted tiny">First drop: email list gets access.</div>
         </div>
 
-        <div class="products products-lux">
-          <article class="product product-lux">
+        <div class="products">
+          <article class="product">
             <a class="product-link" href="product-cap.html" aria-label="View Signature Cap">
               <img class="product-photo" src="images/cap.jpg" alt="Signature Cap" loading="lazy" decoding="async" />
             </a>
@@ -110,7 +108,7 @@
             <a class="btn btn-small" href="product-cap.html">View</a>
           </article>
 
-          <article class="product product-lux">
+          <article class="product">
             <a class="product-link" href="product-tee.html" aria-label="View Core Tee">
               <img class="product-photo" src="images/tee.jpg" alt="Core Tee" loading="lazy" decoding="async" />
             </a>
@@ -122,7 +120,7 @@
             <a class="btn btn-small" href="product-tee.html">View</a>
           </article>
 
-          <article class="product product-lux">
+          <article class="product">
             <a class="product-link" href="product-essential.html" aria-label="View Everyday Essential">
               <img class="product-photo" src="images/essential.jpg" alt="Everyday Essential" loading="lazy" decoding="async" />
             </a>
@@ -138,8 +136,8 @@
     </section>
 
     <!-- LIFESTYLE (CONTROLLED REALITY) -->
-    <section class="section alt section-lux">
-      <div class="container lifestyle lifestyle-lux">
+    <section class="section alt">
+      <div class="container lifestyle">
         <div class="lifestyle-media">
           <div class="lifestyle-card">
             <img class="life-img" src="images/lifestyle-hat.jpg" alt="Hat on a table" loading="lazy" decoding="async" />
@@ -157,7 +155,7 @@
     </section>
 
     <!-- ABOUT (ON-PAGE SUMMARY) -->
-    <section id="about" class="section section-lux">
+    <section id="about" class="section">
       <div class="container about">
         <div class="section-head">
           <h2>About</h2>
@@ -185,7 +183,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section section-lux">
+    <section id="contact" class="section">
       <div class="container contact-box">
         <h2>Get Deal Alerts</h2>
         <p class="muted">Drop your email. We only message when drops are real.</p>
@@ -210,8 +208,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Reveal title + draw line once (no loop)
     window.addEventListener("load", () => {
       const t = document.querySelector("[data-reveal]");
       if (t) t.classList.add("is-visible");
