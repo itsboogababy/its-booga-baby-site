@@ -95,17 +95,16 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
   width:76px;
   height:76px;
   border-radius:22px;
-  background: linear-gradient(135deg, rgba(212,175,55,.25), rgba(255,255,255,.02));
-  border:1px solid rgba(212,175,55,.28);
-  display:flex; align-items:center; justify-content:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   overflow:hidden;
-  box-shadow: var(--shadow);
 }
+
 .logo img{
-  width:58px;
-  height:58px;
+  width:100%;
+  height:100%;
   object-fit:contain;
-  display:block;
 }
 
 .nav{display:flex; align-items:center; gap:14px}
@@ -559,4 +558,5 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
   .product-page{grid-template-columns:1fr}
   .product-page-media{height:360px}
 }
+
 
