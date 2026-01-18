@@ -559,4 +559,41 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
   .product-page-media{height:360px}
 }
 
+/* ================================
+   CHECKOUT PAGE
+   ================================ */
+.checkout-grid{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:18px;
+}
+
+.checkout-card{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:16px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.checkout-top{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.checkout-name{font-weight:900; letter-spacing:.02em}
+.checkout-price{font-weight:800; opacity:.92}
+.checkout-desc{margin:0; line-height:1.6}
+.checkout-note{margin-top:2px}
+
+@media (max-width: 900px){
+  .checkout-grid{grid-template-columns:1fr}
+}
+
 
