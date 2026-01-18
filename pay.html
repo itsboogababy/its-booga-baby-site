@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pay — IT’S BOOGA BABY</title>
+  <meta name="description" content="Secure checkout links for IT’S BOOGA BABY drops." />
+  <link rel="stylesheet" href="style.css?v=8" />
+</head>
+
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="IT’S BOOGA BABY home">
+        <div class="logo" aria-label="IT’S BOOGA BABY logo">
+          <img src="logo-main-v2.png?v=1" alt="IT’S BOOGA BABY logo" decoding="async" />
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">IT’S BOOGA BABY</div>
+          <div class="brand-tagline">Quality over noise</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#featured">Featured</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-ghost" href="index.html#contact">Get Updates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Secure Checkout</h2>
+            <p class="muted">Payments are processed by a secure provider. We never store card details.</p>
+          </div>
+        </div>
+
+        <div class="checkout-grid">
+          <!-- CAP -->
+          <article class="checkout-card">
+            <div class="checkout-top">
+              <div class="checkout-name">Signature Cap</div>
+              <div class="checkout-price">$—</div>
+            </div>
+            <p class="muted checkout-desc">Clean fit. Everyday wear. No extra.</p>
+
+            <!-- Replace the # with your real Stripe/PayPal link -->
+            <a class="btn" href="#" target="_blank" rel="noopener">Pay for Cap</a>
+
+            <div class="tiny muted checkout-note">Opens secure checkout in a new tab.</div>
+          </article>
+
+          <!-- TEE -->
+          <article class="checkout-card">
+            <div class="checkout-top">
+              <div class="checkout-name">Core Tee</div>
+              <div class="checkout-price">$—</div>
+            </div>
+            <p class="muted checkout-desc">Soft, solid, consistent. Built for repeat wears.</p>
+
+            <a class="btn" href="#" target="_blank" rel="noopener">Pay for Tee</a>
+
+            <div class="tiny muted checkout-note">Opens secure checkout in a new tab.</div>
+          </article>
+
+          <!-- ESSENTIAL -->
+          <article class="checkout-card">
+            <div class="checkout-top">
+              <div class="checkout-name">Everyday Essential</div>
+              <div class="checkout-price">$—</div>
+            </div>
+            <p class="muted checkout-desc">The piece you keep reaching for.</p>
+
+            <a class="btn" href="#" target="_blank" rel="noopener">Pay for Essential</a>
+
+            <div class="tiny muted checkout-note">Opens secure checkout in a new tab.</div>
+          </article>
+        </div>
+
+        <div style="margin-top:18px;">
+          <a class="btn btn-ghost" href="index.html#featured">Back to Featured</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> IT’S BOOGA BABY</div>
+      <div class="footer-flex">IT’S BOOGA BABY LLC <span class="dot">•</span> EST. 2025</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
