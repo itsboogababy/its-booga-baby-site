@@ -7,7 +7,7 @@
   <meta name="description" content="Quiet swagger. Solid pieces. Quality over noise." />
 
   <link rel="preconnect" href="https://formspree.io" />
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
 
 <body>
@@ -26,8 +26,9 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#featured">Featured</a>
-        <a href="pay.html">Pay</a>
+        <a href="#shop">Shop</a>
+        <a href="#featured">Best Sellers</a>
+        <a href="#shop-men">Shop Men</a>
         <a href="about.html">About</a>
         <a class="btn btn-ghost" href="#contact">Get Updates</a>
       </nav>
@@ -37,9 +38,9 @@
   <main id="main">
     <div id="top"></div>
 
-    <!-- HERO (LUXURY FIRST IMPRESSION) -->
-    <section class="hero">
-      <div class="container hero-lux-grid">
+    <!-- HERO (Shop-forward luxury) -->
+    <section class="hero hero-shop">
+      <div class="container hero-shop-grid">
         <div class="hero-copy">
           <p class="hero-kicker">Quiet swagger. Solid pieces.</p>
 
@@ -53,28 +54,28 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn" href="#featured">Shop Featured</a>
-            <a class="btn btn-ghost" href="#contact">Join the Deal List</a>
+            <a class="btn" href="#featured">Shop Drop</a>
+            <a class="btn btn-ghost" href="product-tee.html">Shop Core Tee</a>
           </div>
 
           <div class="trust">
-            <span class="trust-item">US Veteran Inspired</span>
+            <span class="trust-item">🇺🇸 US Veteran Inspired</span>
             <span class="trust-item">🔒 Secure site</span>
             <span class="trust-item">🧼 Clean drops only</span>
           </div>
         </div>
 
-        <!-- Controlled luxury image moment -->
         <div class="hero-media" aria-hidden="true">
           <div class="hero-media-card">
-            <img class="hero-media-img" src="images/lifestyle-hat.jpg" alt="" loading="lazy" decoding="async" />
+            <!-- Use your strongest flagship/lifestyle image here -->
+            <img class="hero-media-img" src="images/lifestyle-hat.jpg" alt="" loading="eager" decoding="async" />
             <div class="hero-media-caption">No hype. Just solid pieces.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- BRAND STATEMENT STRIP (QUIET SWAG) -->
+    <!-- BRAND STATEMENT STRIP (quiet swagger) -->
     <section class="strip">
       <div class="container strip-inner">
         <div class="strip-text">
@@ -85,18 +86,19 @@
       </div>
     </section>
 
-    <!-- FEATURED PRODUCTS (CLEAN FLEX) -->
-    <section id="featured" class="section">
+    <!-- SHOP (puts products higher, right under the strip) -->
+    <section id="shop" class="section">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Featured</h2>
-            <p class="muted">Three pieces. Chosen, not dumped.</p>
+            <h2>Shop</h2>
+            <p class="muted">Start with the core. Expand with discipline.</p>
           </div>
           <div class="muted tiny">First drop: email list gets access.</div>
         </div>
 
-        <div class="products">
+        <!-- Featured products are now "high" on the page -->
+        <div id="featured" class="products">
           <article class="product">
             <a class="product-link" href="product-cap.html" aria-label="View Signature Cap">
               <img class="product-photo" src="images/cap.jpg" alt="Signature Cap" loading="lazy" decoding="async" />
@@ -106,7 +108,10 @@
               <div class="product-price">$—</div>
             </div>
             <p class="product-desc muted">Clean fit. Everyday wear. No extra.</p>
-            <a class="btn btn-small" href="product-cap.html">View</a>
+            <div class="product-actions">
+              <a class="btn btn-small" href="product-cap.html">View</a>
+              <a class="btn btn-small btn-ghost" href="#contact">Get drop access</a>
+            </div>
           </article>
 
           <article class="product">
@@ -118,7 +123,10 @@
               <div class="product-price">$—</div>
             </div>
             <p class="product-desc muted">Soft, solid, consistent. Built for repeat wears.</p>
-            <a class="btn btn-small" href="product-tee.html">View</a>
+            <div class="product-actions">
+              <a class="btn btn-small" href="product-tee.html">View</a>
+              <a class="btn btn-small btn-ghost" href="#contact">Get drop access</a>
+            </div>
           </article>
 
           <article class="product">
@@ -130,13 +138,23 @@
               <div class="product-price">$—</div>
             </div>
             <p class="product-desc muted">The piece you keep reaching for.</p>
-            <a class="btn btn-small" href="product-essential.html">View</a>
+            <div class="product-actions">
+              <a class="btn btn-small" href="product-essential.html">View</a>
+              <a class="btn btn-small btn-ghost" href="#contact">Get drop access</a>
+            </div>
           </article>
+        </div>
+
+        <!-- Simple "Shop Men" anchor (no store yet, but matches expectations) -->
+        <div id="shop-men" class="shop-note">
+          <p class="muted">
+            Shop Men: launching with core fits and disciplined drops. Join the list for first access.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- LIFESTYLE (CONTROLLED REALITY) -->
+    <!-- LIFESTYLE (controlled reality) -->
     <section class="section alt">
       <div class="container lifestyle">
         <div class="lifestyle-media">
@@ -161,14 +179,13 @@
         <div class="section-head">
           <h2>Mission</h2>
         </div>
-
         <p class="mission-text">
           It’s Booga Baby exists to create well-built, everyday essentials for people who value consistency over trends and quality over noise.
         </p>
       </div>
     </section>
 
-    <!-- ABOUT (ON-PAGE SUMMARY) -->
+    <!-- ABOUT (summary) -->
     <section id="about" class="section">
       <div class="container about">
         <div class="section-head">
@@ -229,8 +246,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
