@@ -44,7 +44,7 @@
           <div class="product-page-info">
             <div class="product-page-top">
               <h1 class="product-page-name">Core Tee</h1>
-              <div class="product-page-price">$—</div>
+              <div class="product-page-price">$32.00</div>
             </div>
 
             <p class="muted product-page-desc">
@@ -55,7 +55,6 @@
 
             <p class="product-page-attitude">Consistency beats trends.</p>
 
-            <!-- Specs (clean + confidence) -->
             <div class="product-page-details">
               <div class="detail">
                 <div class="detail-title">Materials</div>
@@ -93,12 +92,40 @@
               </div>
             </div>
 
+            <div class="product-options">
+              <div class="option-group">
+                <div class="option-label">Color</div>
+                <div class="option-buttons">
+                  <button type="button" class="option-btn active" data-type="color" data-value="Solid Cream">Solid Cream</button>
+                  <button type="button" class="option-btn" data-type="color" data-value="Solid White">Solid White</button>
+                  <button type="button" class="option-btn" data-type="color" data-value="Solid Black">Solid Black</button>
+                  <button type="button" class="option-btn" data-type="color" data-value="Solid Military Green">Solid Military Green</button>
+                  <button type="button" class="option-btn" data-type="color" data-value="Solid Heavy Metal">Solid Heavy Metal</button>
+                  <button type="button" class="option-btn" data-type="color" data-value="Solid Midnight Navy">Solid Midnight Navy</button>
+                  <button type="button" class="option-btn" data-type="color" data-value="Solid Red">Solid Red</button>
+                </div>
+              </div>
+
+              <div class="option-group">
+                <div class="option-label">Size</div>
+                <div class="option-buttons">
+                  <button type="button" class="option-btn" data-type="size" data-value="S">S</button>
+                  <button type="button" class="option-btn active" data-type="size" data-value="M">M</button>
+                  <button type="button" class="option-btn" data-type="size" data-value="L">L</button>
+                  <button type="button" class="option-btn" data-type="size" data-value="XL">XL</button>
+                  <button type="button" class="option-btn" data-type="size" data-value="2XL">2XL</button>
+                </div>
+              </div>
+
+              <p class="tiny muted" id="selection-preview">Selected: Solid Cream / M</p>
+            </div>
+
             <div class="product-page-actions">
-              <a class="btn" href="https://buy.stripe.com/00wcN5ari8zr2hDg9wfYY00">Buy Now</a>
+              <a class="btn" id="buy-now-btn" href="https://buy.stripe.com/00wcN5ari8zr2hDg9wfYY00">Buy Now</a>
               <a class="btn btn-ghost" href="index.html#featured">Back to Featured</a>
             </div>
 
-            <p class="tiny muted">Secure checkout powered by Stripe.</p>
+            <p class="tiny muted">Secure checkout powered by Stripe. Please use the selected color and size when fulfilling the order in Printify.</p>
           </div>
         </div>
       </div>
@@ -114,6 +141,38 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    let selectedColor = "Solid Cream";
+    let selectedSize = "M";
+
+    function updatePreview() {
+      const preview = document.getElementById("selection-preview");
+      if (preview) {
+        preview.textContent = `Selected: ${selectedColor} / ${selectedSize}`;
+      }
+    }
+
+    document.querySelectorAll(".option-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const type = btn.dataset.type;
+        const value = btn.dataset.value;
+
+        if (type === "color") {
+          selectedColor = value;
+          document.querySelectorAll('[data-type="color"]').forEach((b) => b.classList.remove("active"));
+        }
+
+        if (type === "size") {
+          selectedSize = value;
+          document.querySelectorAll('[data-type="size"]').forEach((b) => b.classList.remove("active"));
+        }
+
+        btn.classList.add("active");
+        updatePreview();
+      });
+    });
+
+    updatePreview();
   </script>
 </body>
 </html>
