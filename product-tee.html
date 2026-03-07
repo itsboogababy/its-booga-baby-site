@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Core Tee — IT’S BOOGA BABY</title>
   <meta name="description" content="Soft where it matters. Solid where it counts. Consistency beats trends." />
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
 
 <body>
@@ -33,13 +33,46 @@
     <section class="section">
       <div class="container">
         <div class="product-page">
-          <img
-            class="product-page-media"
-            src="images/tee.jpg"
-            alt="Core Tee"
-            loading="lazy"
-            decoding="async"
-          />
+
+          <div class="product-gallery">
+            <img
+              id="main-product-image"
+              class="product-page-media"
+              src="images/Front-Solid-Cream.png"
+              alt="Core Tee in Solid Cream"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div class="product-thumbnails">
+              <button
+                type="button"
+                class="thumb-btn active"
+                id="view-front-btn"
+                aria-label="View front"
+              >
+                Front
+              </button>
+
+              <button
+                type="button"
+                class="thumb-btn"
+                id="view-back-btn"
+                aria-label="View back"
+              >
+                Back
+              </button>
+
+              <button
+                type="button"
+                class="thumb-btn"
+                id="view-size-chart-btn"
+                aria-label="View size chart"
+              >
+                Size Chart
+              </button>
+            </div>
+          </div>
 
           <div class="product-page-info">
             <div class="product-page-top">
@@ -107,6 +140,15 @@
               </div>
 
               <div class="option-group">
+                <div class="option-label">View</div>
+                <div class="option-buttons">
+                  <button type="button" class="option-btn active" data-type="view" data-value="front">Front</button>
+                  <button type="button" class="option-btn" data-type="view" data-value="back">Back</button>
+                  <button type="button" class="option-btn" data-type="view" data-value="size-chart">Size Chart</button>
+                </div>
+              </div>
+
+              <div class="option-group">
                 <div class="option-label">Size</div>
                 <div class="option-buttons">
                   <button type="button" class="option-btn" data-type="size" data-value="S">S</button>
@@ -117,15 +159,15 @@
                 </div>
               </div>
 
-              <p class="tiny muted" id="selection-preview">Selected: Solid Cream / M</p>
+              <p class="tiny muted" id="selection-preview">Selected: Solid Cream / Front / M</p>
             </div>
 
             <div class="product-page-actions">
-              <a class="btn" id="https://buy.stripe.com/8x2cN58ja9Dv1dz8H4fYY01">Buy Now</a>
+              <a class="btn" id="buy-now-btn" href="https://buy.stripe.com/8x2cN58ja9Dv1dz8H4fYY01">Buy Now</a>
               <a class="btn btn-ghost" href="index.html#featured">Back to Featured</a>
             </div>
 
-            <p class="tiny muted">Secure checkout powered by Stripe. Please use the selected color and size when fulfilling the order in Printify.</p>
+            <p class="tiny muted">Secure checkout powered by Stripe. Please use the selected color, view, and size when fulfilling the order in Printify.</p>
           </div>
         </div>
       </div>
@@ -144,12 +186,68 @@
 
     let selectedColor = "Solid Cream";
     let selectedSize = "M";
+    let selectedView = "front";
+
+    const imageMap = {
+      "Solid Cream": {
+        front: "images/Front-Solid-Cream.png",
+        back: "images/Back-Solid-Cream.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid White": {
+        front: "images/Front-Solid-White.png",
+        back: "images/Back-Solid-White.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Black": {
+        front: "images/Front-Solid-Black.png",
+        back: "images/Back-Solid-Black.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Military Green": {
+        front: "images/Front-Solid-Military-Green.png",
+        back: "images/Back-Solid-Military-Green.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Heavy Metal": {
+        front: "images/Front-Solid-Heavy-Metal.png",
+        back: "images/Back-Solid-Heavy-Metal.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Midnight Navy": {
+        front: "images/Front-Solid-Midnight-Navy.png",
+        back: "images/Back-Solid-Midnight-Navy.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Red": {
+        front: "images/Front-Solid-Red.png",
+        back: "images/Back-Solid-Red.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      }
+    };
 
     function updatePreview() {
       const preview = document.getElementById("selection-preview");
       if (preview) {
-        preview.textContent = `Selected: ${selectedColor} / ${selectedSize}`;
+        const viewLabel =
+          selectedView === "front" ? "Front" :
+          selectedView === "back" ? "Back" :
+          "Size Chart";
+        preview.textContent = `Selected: ${selectedColor} / ${viewLabel} / ${selectedSize}`;
       }
+    }
+
+    function updateMainImage() {
+      const mainImage = document.getElementById("main-product-image");
+      const colorImages = imageMap[selectedColor];
+
+      if (!mainImage || !colorImages) return;
+
+      mainImage.src = colorImages[selectedView];
+      mainImage.alt =
+        selectedView === "size-chart"
+          ? "Core Tee size chart"
+          : `Core Tee in ${selectedColor} (${selectedView})`;
     }
 
     document.querySelectorAll(".option-btn").forEach((btn) => {
@@ -160,18 +258,51 @@
         if (type === "color") {
           selectedColor = value;
           document.querySelectorAll('[data-type="color"]').forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
         }
 
         if (type === "size") {
           selectedSize = value;
           document.querySelectorAll('[data-type="size"]').forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
         }
 
-        btn.classList.add("active");
+        if (type === "view") {
+          selectedView = value;
+          document.querySelectorAll('[data-type="view"]').forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        }
+
+        updateMainImage();
         updatePreview();
       });
     });
 
+    document.getElementById("view-front-btn").addEventListener("click", () => {
+      selectedView = "front";
+      document.querySelectorAll('[data-type="view"]').forEach((b) => b.classList.remove("active"));
+      document.querySelector('[data-type="view"][data-value="front"]').classList.add("active");
+      updateMainImage();
+      updatePreview();
+    });
+
+    document.getElementById("view-back-btn").addEventListener("click", () => {
+      selectedView = "back";
+      document.querySelectorAll('[data-type="view"]').forEach((b) => b.classList.remove("active"));
+      document.querySelector('[data-type="view"][data-value="back"]').classList.add("active");
+      updateMainImage();
+      updatePreview();
+    });
+
+    document.getElementById("view-size-chart-btn").addEventListener("click", () => {
+      selectedView = "size-chart";
+      document.querySelectorAll('[data-type="view"]').forEach((b) => b.classList.remove("active"));
+      document.querySelector('[data-type="view"][data-value="size-chart"]').classList.add("active");
+      updateMainImage();
+      updatePreview();
+    });
+
+    updateMainImage();
     updatePreview();
   </script>
 </body>
