@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You — IT’S BOOGA BABY</title>
+  <meta name="description" content="Your order has been received." />
+  <link rel="stylesheet" href="style.css?v=9" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="IT’S BOOGA BABY home">
+        <div class="logo" aria-label="IT’S BOOGA BABY logo">
+          <img src="logo-main-v2.png?v=1" alt="IT’S BOOGA BABY logo" decoding="async" />
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">IT’S BOOGA BABY</div>
+          <div class="brand-tagline">Quality over noise</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#featured">Featured</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-ghost" href="index.html#contact">Get Updates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="contact-box thank-you-box">
+          <p class="thank-you-check">✓</p>
+          <h1 class="thank-you-title">Thank you for your order</h1>
+          <p class="thank-you-text">
+            Your payment was received successfully.
+          </p>
+          <p class="thank-you-text muted">
+            We’ll review your order, prepare fulfillment, and send shipping updates as soon as your item is on the way.
+          </p>
+
+          <div class="about-points">
+            <div class="about-point">Order received</div>
+            <div class="about-point">Fulfillment starts soon</div>
+            <div class="about-point">Tracking will follow after shipment</div>
+          </div>
+
+          <div class="product-page-actions" style="margin-top:18px;">
+            <a class="btn" href="index.html#featured">Continue Shopping</a>
+            <a class="btn btn-ghost" href="about.html">About the Brand</a>
+          </div>
+
+          <p class="tiny muted" style="margin-top:16px;">
+            Need help with your order? Contact us through the site updates form.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> IT’S BOOGA BABY</div>
+      <div class="footer-flex">IT’S BOOGA BABY LLC <span class="dot">•</span> EST. 2025</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
