@@ -359,7 +359,6 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
 .product-price{font-weight:800; opacity:.92}
 .product-desc{margin:2px 0 4px; line-height:1.6}
 
-/* If you add the double buttons row */
 .product-actions{
   display:flex;
   gap:10px;
@@ -556,6 +555,57 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
   gap:10px;
   flex-wrap:wrap;
   margin-top:10px;
+}
+
+/* ================================
+   PRODUCT OPTIONS
+   ================================ */
+.product-options{
+  margin:18px 0 16px;
+}
+
+.option-group{
+  margin-bottom:16px;
+}
+
+.option-label{
+  font-weight:900;
+  margin-bottom:8px;
+  letter-spacing:.02em;
+}
+
+.option-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.option-btn{
+  border:1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  padding:10px 16px;
+  border-radius:999px;
+  cursor:pointer;
+  font:inherit;
+  font-weight:700;
+  transition:transform .12s ease, border-color .12s ease, background .12s ease, color .12s ease;
+}
+
+.option-btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.35);
+  background: rgba(255,255,255,.08);
+}
+
+.option-btn.active{
+  background: var(--cream);
+  color:#111;
+  border-color: var(--cream);
+}
+
+#selection-preview{
+  margin-top:6px;
 }
 
 /* ================================
