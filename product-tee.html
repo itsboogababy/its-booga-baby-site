@@ -48,7 +48,7 @@
               <button
                 type="button"
                 class="thumb-btn active"
-                id="view-front-btn"
+                data-thumb-view="front"
                 aria-label="View front"
               >
                 Front
@@ -57,7 +57,7 @@
               <button
                 type="button"
                 class="thumb-btn"
-                id="view-back-btn"
+                data-thumb-view="back"
                 aria-label="View back"
               >
                 Back
@@ -66,7 +66,7 @@
               <button
                 type="button"
                 class="thumb-btn"
-                id="view-size-chart-btn"
+                data-thumb-view="size-chart"
                 aria-label="View size chart"
               >
                 Size Chart
@@ -79,9 +79,9 @@
               <h1 class="product-page-name">Core Tee</h1>
               <div class="product-page-price">$34.75</div>
             </div>
-            
+
             <p class="product-stock">✓ In stock — ready to ship</p>
-            
+
             <p class="muted product-page-desc">
               Soft where it matters. Solid where it counts.
               The Core Tee is built for repeat wears — alone or layered — without stretching,
@@ -169,7 +169,10 @@
               <a class="btn btn-ghost" href="index.html#featured">Back to Featured</a>
             </div>
 
-            <p class="tiny muted">Secure checkout powered by Stripe. Please use the selected color, view, and size when fulfilling the order in Printify.</p>
+            <p class="tiny muted">
+              Secure checkout powered by Stripe.<br>
+              Please use the selected color, view, and size when fulfilling the order in Printify.
+            </p>
           </div>
         </div>
       </div>
@@ -183,105 +186,124 @@
     </div>
   </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  let selectedColor = "Solid Cream";
-  let selectedSize = "M";
-  let selectedView = "front";
+    let selectedColor = "Solid Cream";
+    let selectedSize = "M";
+    let selectedView = "front";
 
-  const imageMap = {
-    "Solid Cream": {
-      front: "images/Front-Solid-Cream.png",
-      back: "images/Back-Solid-Cream.png",
-      "size-chart": "images/Size-Chart-Solid-Black.jpg"
-    },
-    "Solid White": {
-      front: "images/Front-Solid-White.png",
-      back: "images/Back-Solid-White.png",
-      "size-chart": "images/Size-Chart-Solid-Black.jpg"
-    },
-    "Solid Black": {
-      front: "images/Front-Solid-Black.png",
-      back: "images/Back-Solid-Black.png",
-      "size-chart": "images/Size-Chart-Solid-Black.jpg"
-    },
-    "Solid Military Green": {
-      front: "images/Front-Solid-Military-Green.png",
-      back: "images/Back-Solid-Military-Green.png",
-      "size-chart": "images/Size-Chart-Solid-Black.jpg"
-    },
-    "Solid Heavy Metal": {
-      front: "images/Front-Solid-Heavy-Metal.png",
-      back: "images/Back-Solid-Heavy-Metal.png",
-      "size-chart": "images/Size-Chart-Solid-Black.jpg"
-    },
-    "Solid Midnight Navy": {
-      front: "images/Front-Solid-Midnight-Navy.png",
-      back: "images/Back-Solid-Midnight-Navy.png",
-      "size-chart": "images/Size-Chart-Solid-Black.jpg"
-    },
-    "Solid Red": {
-      front: "images/Front-Solid-Red.png",
-      back: "images/Back-Solid-Red.png",
-      "size-chart": "images/Size-Chart-Solid-Black.jpg"
+    const imageMap = {
+      "Solid Cream": {
+        front: "images/Front-Solid-Cream.png",
+        back: "images/Back-Solid-Cream.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid White": {
+        front: "images/Front-Solid-White.png",
+        back: "images/Back-Solid-White.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Black": {
+        front: "images/Front-Solid-Black.png",
+        back: "images/Back-Solid-Black.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Military Green": {
+        front: "images/Front-Solid-Military-Green.png",
+        back: "images/Back-Solid-Military-Green.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Heavy Metal": {
+        front: "images/Front-Solid-Heavy-Metal.png",
+        back: "images/Back-Solid-Heavy-Metal.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Midnight Navy": {
+        front: "images/Front-Solid-Midnight-Navy.png",
+        back: "images/Back-Solid-Midnight-Navy.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      },
+      "Solid Red": {
+        front: "images/Front-Solid-Red.png",
+        back: "images/Back-Solid-Red.png",
+        "size-chart": "images/Size-Chart-Solid-Black.jpg"
+      }
+    };
+
+    function updatePreview() {
+      const preview = document.getElementById("selection-preview");
+      if (preview) {
+        const viewLabel =
+          selectedView === "front" ? "Front" :
+          selectedView === "back" ? "Back" :
+          "Size Chart";
+        preview.textContent = `Selected: ${selectedColor} / ${viewLabel} / ${selectedSize}`;
+      }
     }
-  };
 
-  function updatePreview() {
-    const preview = document.getElementById("selection-preview");
-    if (preview) {
-      const viewLabel =
-        selectedView === "front" ? "Front" :
-        selectedView === "back" ? "Back" :
-        "Size Chart";
-      preview.textContent = `Selected: ${selectedColor} / ${viewLabel} / ${selectedSize}`;
+    function updateMainImage() {
+      const mainImage = document.getElementById("main-product-image");
+      const colorImages = imageMap[selectedColor];
+
+      if (!mainImage || !colorImages) return;
+
+      mainImage.src = colorImages[selectedView];
+      mainImage.alt =
+        selectedView === "size-chart"
+          ? "Core Tee size chart"
+          : `Core Tee in ${selectedColor} (${selectedView})`;
     }
-  }
 
-  function updateMainImage() {
-    const mainImage = document.getElementById("main-product-image");
-    const colorImages = imageMap[selectedColor];
+    function syncViewButtons() {
+      document.querySelectorAll('[data-type="view"]').forEach((b) => {
+        b.classList.toggle("active", b.dataset.value === selectedView);
+      });
 
-    if (!mainImage || !colorImages) return;
+      document.querySelectorAll('[data-thumb-view]').forEach((b) => {
+        b.classList.toggle("active", b.dataset.thumbView === selectedView);
+      });
+    }
 
-    mainImage.src = colorImages[selectedView];
-    mainImage.alt =
-      selectedView === "size-chart"
-        ? "Core Tee size chart"
-        : `Core Tee in ${selectedColor} (${selectedView})`;
-  }
+    document.querySelectorAll(".option-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const type = btn.dataset.type;
+        const value = btn.dataset.value;
 
-  document.querySelectorAll(".option-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const type = btn.dataset.type;
-      const value = btn.dataset.value;
+        if (type === "color") {
+          selectedColor = value;
+          document.querySelectorAll('[data-type="color"]').forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        }
 
-      if (type === "color") {
-        selectedColor = value;
-        document.querySelectorAll('[data-type="color"]').forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-      }
+        if (type === "size") {
+          selectedSize = value;
+          document.querySelectorAll('[data-type="size"]').forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        }
 
-      if (type === "size") {
-        selectedSize = value;
-        document.querySelectorAll('[data-type="size"]').forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-      }
+        if (type === "view") {
+          selectedView = value;
+          syncViewButtons();
+        }
 
-      if (type === "view") {
-        selectedView = value;
-        document.querySelectorAll('[data-type="view"]').forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-      }
-
-      updateMainImage();
-      updatePreview();
+        updateMainImage();
+        updatePreview();
+      });
     });
-  });
 
-  updateMainImage();
-  updatePreview();
-</script>
+    document.querySelectorAll('[data-thumb-view]').forEach((btn) => {
+      btn.addEventListener("click", () => {
+        selectedView = btn.dataset.thumbView;
+        syncViewButtons();
+        updateMainImage();
+        updatePreview();
+      });
+    });
+
+    syncViewButtons();
+    updateMainImage();
+    updatePreview();
+  </script>
 </body>
 </html>
