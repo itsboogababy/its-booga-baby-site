@@ -108,13 +108,11 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
   align-items:center;
   justify-content:center;
   overflow:hidden;
-
   background: linear-gradient(135deg, rgba(212,175,55,.25), rgba(255,255,255,.02));
   border:1px solid rgba(212,175,55,.28);
   box-shadow: var(--shadow);
 }
 
-/* Keep logo readable + consistent (don’t stretch) */
 .logo img{
   width:72%;
   height:72%;
@@ -148,7 +146,6 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
    ================================ */
 .hero{padding:140px 0 86px}
 
-/* Support BOTH class names so you never break layout */
 .hero-lux-grid,
 .hero-shop-grid{
   display:grid;
@@ -167,7 +164,6 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
   font-size:12px;
 }
 
-/* Title fallback: visible if JS fails */
 .hero-title{
   position:relative;
   margin:0 0 10px;
@@ -179,7 +175,6 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
   transform:none;
 }
 
-/* Only animate if you use data-reveal */
 .hero-title[data-reveal]{
   opacity:0;
   transform: translateY(8px);
@@ -229,7 +224,6 @@ h2{margin:0; font-size:26px; letter-spacing:.02em}
   background: rgba(255,255,255,.03);
 }
 
-/* Hero photo moment */
 .hero-media{display:flex; justify-content:flex-end}
 .hero-media-card{
   width:100%;
